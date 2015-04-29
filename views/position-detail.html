@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div>
+      <div class="container">
+          <div class="row">
+            <div class="col-md-12">  
+              	<h1 class="page-title">
+	              	<small>{{pose.id}}.</small> {{pose.name}} <br>
+					<small>{{pose.full_name}} </small>
+				</h1>
+				<div class="pose-img-wrapper">
+					<nav class="paddle-nav">
+						<ul class="list-unstyled">
+							{% if previous_pose %}
+							<li><a class="arrow previous" href="/has/26-positions/{{ previous_pose.id }}/{{ previous_pose.slug }}" ><b>Previous</b></a></li>
+							{% endif %}
+							{% if next_pose %}
+							<li><a class="arrow next" href="/has/26-positions/{{ next_pose.id }}/{{ next_pose.slug }}" ><b>Next</b></a></li>
+							{% endif %}
+						</ul>
+					</nav>
+					<div>
+						<img src="/img/pose-{{pose.id}}.png" />
+					</div>
+				</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 col-sm-4 position-benefits">  
+              <h3>For your body</h3>
+              <ul>
+				  {% for b in pose.body_benefits %}
+				  <li>{{ b }}</li>
+				  {% endfor %}
+              </ul>
+            </div>
+            <div class="col-md-4 col-sm-4 position-benefits">  
+              <h3>For your mind</h3>
+              <ul>
+				  {% for b in pose.mind_benefits %}
+				  <li>{{ b }}</li>
+				  {% endfor %}
+              </ul>
+            </div>
+            <div class="col-md-4 col-sm-4 position-benefits">  
+              <h3>Practice tips</h3>
+              <p>{{ pose.practice_tips }} </p>
+            </div>
+          </div>
+          <div class="row">
+            <div id="position-browser" class="well col-md-12">  
+				<div>
+					<h3>All 26 Bikram Yoga positions</h3>
+					<ul class="list-inline">
+						{% for p in all_poses %}
+						<li {% if p.id==pose.id %}class="active"{% endif %}><a href="/has/26-positions/{{ p.id }}/{{ p.slug }}"><img src="/img/tn-pose-{{ p.id }}.gif"/></a></li>
+						{% endfor %}
+					</ul>
+				</div>
+            </div>
+          </div>
+      </div>
+    </div>
+{% endblock %}

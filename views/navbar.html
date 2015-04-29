@@ -1,0 +1,27 @@
+<header>
+    <nav id="nav" class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="../" class="navbar-brand"><img src="/img/logo.png"/></a>
+                </div>
+                <nav class="main-nav collapse navbar-collapse">
+                    <ul class="nav navbar-nav pull-right">
+                        <li><a href="/" class="{% if current_page == 'home' %}active {% endif %}nav-home">Home</a></li>
+                        <!--<li><a href="/about" class="nav-about">Why try it?</a></li>-->
+                        <li><a href="/classes" class="{% if current_page == 'classes' %}active {% endif %} nav-classes">Classes</a></li>
+                        <li><a href="/packages-and-prices" class="{% if current_page == 'pricing' %}active {% endif %} nav-pricing">Pricing</a></li>
+                        <li><a href="/has/26-poses" class="{% if current_page == 'poses' %}active {% endif %}nav-poses">The 26 Poses</a></li>
+                        <li><a href="/contact" class="{% if current_page == 'contact' %}active {% endif %}nav-contact">Find us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </nav>
+</header>

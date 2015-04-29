@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block content %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">  
+                  	<h1 class="page-title">26 Positions</h1>
+                    <h2 class="page-subtitle">
+                        A demanding series of 26 asanas (positions)<br>
+                        Designed for safe, deep stretching 
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <section class="container page-section">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>Bikram Yoga is a demanding 26 posture (asana) series with 2 breathing exercises (pranayama), done in a room heated to 40°C for 90 minutes. The heat allows for safe and deep stretching while simultaneously flushing and detoxifying every single system of the body, from bones to skin, inside out.</p>
+                </div>
+                <div class="col-sm-12">  
+                  	<ul class="list-unstyled position-list">
+    				  	{% for pose in all_poses %}
+                  		<li class="pose pose-{{pose.id}}">
+                            <div><img src="/img/tn-pose-{{pose.id}}.gif"/></div>
+                			<h2>
+                                <small>{{pose.id}}. {{ pose.full_name }}</small><br>
+                                {{ pose.name }}
+                            </h2>
+                            <div>
+                                <h4>Good for your body</h4>
+                                <ul class="list-unstyled">
+                                    {% for b in pose.body_benefits %}
+                                        <li>{{ b }}</li>
+                                    {% endfor %}
+                                </ul>
+                                <h4>Good for your mind</h4>
+                                <ul class="list-unstyled">
+                                    {% for b in pose.body_benefits %}
+                                        <li>{{ b }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                  		</li>
+    				  	{% endfor %}
+                  	</ul>
+                    <hr>
+                </div>
+          </div>
+        </section>
+{% endblock %}
