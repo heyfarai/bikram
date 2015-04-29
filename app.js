@@ -2,8 +2,7 @@ var config = require('./config');
 var express = require('express');
 var nunjucks = require('nunjucks');
 var path = require('path');
-var favicon = require('static-favicon');
-var logger = require('morgan');
+var favicon = require('serve-favicon');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
