@@ -180,6 +180,7 @@ section p {
   padding-top: 20px;
   padding-bottom: 30px;
   margin-top: 30px;
+  font-size: .8em;
 }
 .copyright-footer {
   background: #333;
@@ -465,6 +466,12 @@ hr.after-h2 {
   footer {
     text-align: center;
   }
+}
+@media (max-width: 480px) {
+  
+}
+@media (min-width: 768px) {
+  
 }
 @media (min-width: 992px) {
   .featurette-heading {

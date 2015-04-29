@@ -22,13 +22,21 @@ poses.push({
 				full_name: 'Ardha Chandrasana with Pada Hastasana', 
 				description: 'Ardha Chandrasana with Pada Hastasana', 
 				body_benefits: [
-								'Good for lungs and respiratory system',
-								'Helps high blood pressure',
-								'Exercises nervous, respiratory and circulatory systems'
+								'Works into the whole skeletal and circulatory systems',
+								'Opens shoulder joints',
+								'Good for frozen shoulder',
+								'Reduces or eliminates pain in the lower back',
+								'Good for abdominal obesity',
+								'Helps with sciatic problems',
+								'Stimulates pituitary gland',
+								'Improves and strengthens every muscle in the central part of the body ',
+								'Tones the spinal nerves and abdominal organs inproving the working of the bowels',
+								'Increases flexibility and strength of rectus abdominis and gluteus maximus',
+								'Exercises colon, pancreas, kidneys, muscular, skeletal, respiratory and glandular systems',
+								'Firms and trims waistline, hips, abdomen, buttocks and thighs'
 								], 
 				mind_benefits: [
-								'Helps with mental relaxation',
-								'Relieves irritability'
+								'Alleviates anxiety and reduces mental stress'
 								],
 				practice_tips: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.' 
 			});
