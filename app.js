@@ -8,7 +8,9 @@ var users = require('./routes/users');
 
 var app = express();
 // view engine setup
+app.set('port', (process.env.PORT || 5000))
 app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'nunjucks');
 
 nunjucks.configure('views', {
     autoescape: true,
@@ -16,8 +18,8 @@ nunjucks.configure('views', {
 });
 
 
-app.use(favicon());
-app.use(logger('dev'));
+
+app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
@@ -54,5 +56,7 @@ app.use(function(err, req, res, next) {
     });
 });
 
+app.listen(app.get('port'), function() {
+  console.log("Learn Axure is running at localhost:" + app.get('port'))
+})
 
-module.exports = app;
