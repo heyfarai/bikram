@@ -18,7 +18,6 @@ nunjucks.configure('views', {
 });
 
 
-
 app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(express.static(path.join(__dirname, 'public')));
 
