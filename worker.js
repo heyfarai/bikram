@@ -5,11 +5,16 @@ var Promise = require('bluebird');
 var Parse = require('parse').Parse;
 var _ = require('underscore');
 var toNumber = require('underscore.string').toNumber;
+var Mandrill = require('mandrill-api/mandrill');
 
+// CONFIGURE EMAILS
+var m = new Mandrill.Mandrill('KOI-UXu9dE9qgjSabCcf5w');
+
+// INTIALISE PARSE
 Parse.initialize(config.Parse.appId, config.Parse.jsKey)
 var YogaClass = Parse.Object.extend("ClassObject");
 
-
+// SET QUERY PARAMETERS
 var params = {
 	"StartDateTime" : moment().subtract(2, 'days').format('YYYY-MM-DD'),
 	"EndDateTime" : moment().add(1, 'days').format('YYYY-MM-DD')
@@ -31,6 +36,34 @@ var getClassDataById = function (allClassDataObjects, id) {
 	return _.find(allClassDataObjects, function (obj) {
 		return obj.classId == id
 	})
+}
+
+var sendResultEmail = function (res) {
+
+	var message = {
+	    "text": res.msg + "\nPeace",
+	    "subject": "Schedule Sync : " + res.result,
+	    "from_email": "farai@me.com",
+	    "from_name": "Bikram SyncBot",
+	    "to": [{
+	            "email": "farai+bot@me.com",
+	            "name": "Farai"
+	        }],
+	    "headers": {
+	        "Reply-To": "farai@me.com"
+	    },
+	    "important": false,
+	};
+
+	m.messages.send({"message": message}, function(result) {
+	    console.log("SYNC RESULT EMAIL", result);
+	   
+	}, function(e) {
+	    // Mandrill returns the error as an object with name and message keys
+	    console.log("SYNC RESULT EMAIL", 'A mandrill error occurred: ' + e.name + ' - ' + e.message);
+	    // A mandrill error occurred: Unknown_Subaccount - No subaccount exists with the id 'customer-123'
+	});
+	return 1
 }
 
 MB.getSoapClient()
@@ -90,21 +123,38 @@ MB.getSoapClient()
 					}
 		})
 		.then(function(itemsToSave){
-			console.log("Gonna try save", itemsToSave.newObjCount, "new classes and", itemsToSave.updateObjCount, "updated classes")
+			var msg = "Gonna try save " 
+						+ itemsToSave.newObjCount
+						+ " new classes and "
+						+ itemsToSave.updateObjCount
+						+ " updated classes";
+			console.log(msg)
 			Parse.Object.saveAll(itemsToSave.objectsToSave,  
-				{
-			        success: function(objs) {
-			            // objects have been saved...
-						console.log("Saved ", objs.length, "Yoga Classes to Parse")
-						return 1
-			        },
-			        error: function(error) { 
-			            // an error occurred...
-						console.log("error saving all", error)
-						return 0
-			        }
-			    });
-			})
+			{
+		        success: function(objs) {
+		            // objects have been saved...
+		            var success_msg = msg + " \nSaved " + objs.length + " Yoga Classes to Parse."
+					console.log(success_msg);
+					sendResultEmail(
+						{
+							"result" 	: "success",
+							"msg" 		: success_msg
+						})
+					return 1
+		        },
+		        error: function(error) { 
+		            // an error occurred...
+		            var error_msg = msg + " \nError saving " + objs.length + "\n" + error
+					console.log(error_msg);
+					sendResultEmail(
+						{
+							"result" 	: "error",
+							"msg" 		: error_msg
+						})
+					return 0
+		        }
+		    });
+		})
 	})
 })
 
