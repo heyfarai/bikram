@@ -426,9 +426,11 @@ hr.after-h2 {
 .schedule-img-wrapper {
   text-align: center;
 }
-#contact-details p,
-#contact-details h2 {
+#contact-details p {
   text-align: left;
+}
+#contact-details h2 {
+  text-align: center;
 }
 #maps img {
   width: 100%;
