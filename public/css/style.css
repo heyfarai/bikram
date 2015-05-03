@@ -35,29 +35,51 @@ h5 {
 li {
   margin-bottom: .6em;
 }
-.class-table-weekly td,
-.class-table-weekly th {
-  padding: 1em 8px !important;
+.section-wrapper {
+  width: 100%;
+}
+.section-wrapper.alt {
+  background-color: #f0f9ff;
+}
+.class-table.past .section-subtitle small {
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+.class-table.past .class-table-weekly {
+  display: none;
+}
+.class-table .section-subtitle small {
+  font-weight: bold;
+  color: #999999 !important;
+}
+.class-table .class-table-weekly td,
+.class-table .class-table-weekly th {
+  padding: .8em 8px !important;
   text-align: center;
+  font-weight: normal;
+}
+.class-table .class-table-weekly .table-week {
+  font-size: .8em;
   font-weight: bold;
 }
-.class-table-weekly .table-week {
-  font-size: .8em;
-}
-.class-table-weekly .table-class-time {
+.class-table .class-table-weekly .table-class-time {
   font-weight: normal;
   color: #999;
   font-size: .9em;
   padding-top: 1.3em !important;
 }
-.class-table-weekly thead th {
+.class-table .class-table-weekly thead th {
   font-weight: normal;
   text-align: center;
   font-size: .8em;
 }
-.class-table-weekly thead th span {
+.class-table .class-table-weekly thead th span {
   display: block;
   font-size: 1.5em;
+  font-weight: bold;
+}
+.class-table .class-table-weekly thead th small {
+  color: #aaa;
 }
 #pricing-table {
   padding-top: 2em;
@@ -185,7 +207,7 @@ section p {
 .copyright-footer {
   background: #333;
   color: #ccc;
-  padding: 7px 0 5px;
+  padding: 1em 0 5px;
   font-size: .8em;
 }
 header {
@@ -233,6 +255,10 @@ header .navbar .nav-wrapper .navbar-brand img {
 header .navbar .nav-wrapper .main-nav,
 header .navbar .nav-wrapper .navbar-toggle {
   margin-top: 25px;
+}
+header .navbar .nav-wrapper .main-nav.in {
+  margin-right: -30px !important;
+  margin-left: -30px !important;
 }
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */

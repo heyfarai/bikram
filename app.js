@@ -56,6 +56,6 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(app.get('port'), function() {
-  console.log("Learn Axure is running at localhost:" + app.get('port'))
+  console.log("Bikram Yoga Fourways is running at localhost:" + app.get('port'))
 })
 

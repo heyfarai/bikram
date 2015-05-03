@@ -65,7 +65,7 @@ var sendResultEmail = function (res) {
 	});
 	return 1
 }
-
+console.log("Bikram SyncBot activated.")
 MB.getSoapClient()
 .then(function(client){ 
 	MB.getClassesWithClient(client, params)

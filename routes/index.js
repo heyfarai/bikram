@@ -8,7 +8,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res) {
 	res.render('index.html', { 
-								title: 'Bikram Yoga Fourways',
+								title: 'Bikram Hot Yoga Fourways',
 								current_page : 'home' 
 							});
 });
@@ -28,7 +28,7 @@ router.get('/has/26-poses', function(req, res) {
 		all_poses.push(o)
 	})
 	res.render('positions.html', { 
-									title: 'Bikram Yoga Fourways' ,
+									title: '26 Poses and Benefits - Bikram Yoga Fourways' ,
 									all_poses : all_poses,
 									current_page : 'poses'
 								});
@@ -68,14 +68,14 @@ router.get('/has/26-poses/:pose_id/:name', function(req, res) {
 
 router.get('/classes', function(req, res) {
 	res.render('classes.html', { 
-									title: 'Bikram Yoga Fourways',
+									title: 'Class Schedule - Bikram Yoga Fourways',
 									current_page : 'classes'
 								});
 });
 
 router.get('/packages-and-prices', function(req, res) {
 	res.render('pricing.html', { 
-									title: 'Bikram Yoga Fourways',
+									title: 'Packages & Prices - Bikram Yoga Fourways',
 									current_page : 'pricing'
 								});
 });
@@ -83,7 +83,7 @@ router.get('/packages-and-prices', function(req, res) {
 
 router.get('/contact', function(req, res) {
 	res.render('contact.html', { 
-									title: 'Bikram Yoga Fourways',
+									title: 'Contact - Bikram Yoga Fourways',
 									current_page : 'contact' 
 								});
 });

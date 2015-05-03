@@ -38,35 +38,64 @@ h5 {
 li {
   margin-bottom: .6em;
 }
-.class-table-weekly {
-    td, th {
-        padding: 1em 8px !important;
-        text-align: center;
-        font-weight: bold;
-
+.section-wrapper {
+    &.alt {
+        background-color: #f0f9ff
     }
-    .table-week {
-        font-size: .8em;
+    width: 100%
+}
+.class-table{
+    &.past {
+        .section-subtitle {
+            small {
+                font-weight: normal;
+                font-size: 1.4rem;
+            }
+        }
+        .class-table-weekly {
+            display: none;
+        }
     }
-    .table-class-time {
-        font-weight: normal;
-        color: #999;
-        font-size: .9em;
-        padding-top: 1.3em !important;
+    .section-subtitle {
+        small {
+            font-weight: bold;
+            color: #999 !important
+        }
     }
-    thead {
-        th {
-            font-weight: normal;
+    .class-table-weekly {
+        td, th {
+            padding: .8em 8px !important;
             text-align: center;
+            font-weight: normal;
+
+        }
+        .table-week {
             font-size: .8em;
-            span {
-                display: block;
-                font-size: 1.5em;
+            font-weight: bold;
+        }
+        .table-class-time {
+            font-weight: normal;
+            color: #999;
+            font-size: .9em;
+            padding-top: 1.3em !important;
+        }
+        thead {
+            th {
+                font-weight: normal;
+                text-align: center;
+                font-size: .8em;
+                span {
+                    display: block;
+                    font-size: 1.5em;
+                    font-weight: bold
+                }
+                small {
+                    color: #aaa;
+                }
             }
         }
     }
 }
-
 #pricing-table {
     padding-top: 2em;
     .table {
@@ -161,11 +190,11 @@ p, li {
 section {
   h2.section-title {
     margin-bottom: .5em
-  }
-  p {
+}
+p {
     text-align: center;
     margin-bottom: 1.5em;
-  }
+}
 }
 .page-section {
   margin-top: 2em;
@@ -190,8 +219,8 @@ section {
     }
     #certification {
         p {
-          font-size: 2em;
-          line-height: 1.3em;
+            font-size: 2em;
+            line-height: 1.3em;
         }
         img {
             width: 100%;
@@ -208,7 +237,7 @@ section {
 .copyright-footer {
   background: #333;
   color: #ccc;
-  padding: 7px 0 5px;
+  padding: 1em 0 5px;
   font-size: .8em;
 }
 header {
@@ -252,6 +281,12 @@ header {
             }
             .main-nav, .navbar-toggle {
                 margin-top: 25px
+            }
+            .main-nav {
+                &.in {
+                    margin-right: -30px !important;
+                    margin-left: -30px !important;
+                }
             }
         }
 
@@ -359,16 +394,16 @@ hr.after-h2 {
   text-align: center;
   img {
     height: 300px;
-  }
+}
 }
 
 .position-benefits {
   ul {
     smargin-left: -24px;
-  }
-  h3 {
+}
+h3 {
     color: #999;
-  }
+}
 }
 .carousel-indicators { 
     li {
@@ -394,7 +429,7 @@ hr.after-h2 {
     position: absolute;
     width: 67px;
     height: 130px;
-     b {
+    b {
       display: block;
       overflow: hidden;
       width: 67px;
@@ -403,8 +438,8 @@ hr.after-h2 {
       background: no-repeat 0 0;
       background-size: 67px 130px;
       behavior: url(/global/scripts/lib/ie7pngfix.htc);
-    }
   }
+}
 }
 .paddle-nav li .arrow.previous {
   left: 0;
@@ -431,11 +466,11 @@ hr.after-h2 {
     a {
       display: block;
       padding-bottom: 5px;
-    }
   }
-  li.active a {
+}
+li.active a {
     border-bottom: 4px solid @blue
-  }
+}
 }
 .schedule-img-wrapper {
     text-align: center;
@@ -530,5 +565,5 @@ hr.after-h2 {
 @media (min-width: 992px) {
   .featurette-heading {
     margin-top: 120px;
-  }
+}
 }
