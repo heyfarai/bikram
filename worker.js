@@ -1,6 +1,6 @@
 var config = require('./config.js');
 var moment = require('moment');
-var MB = require('./mindBody.js');
+var MB = require('./mindbody.js');
 var Promise = require('bluebird');
 var Parse = require('parse').Parse;
 var _ = require('underscore');

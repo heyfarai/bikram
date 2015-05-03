@@ -1,5 +1,5 @@
 var soap = require('soap');
-var config = require('../config');
+var config = require('./config.js');
 var _ = require('underscore');
 var moment = require('moment');
 var Promise = require('bluebird');
