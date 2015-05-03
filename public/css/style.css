@@ -155,6 +155,9 @@ h1.page-title small a {
   margin-top: 55px;
   margin-bottom: 2em;
 }
+.hero-img-wrapper img {
+  margin: 0 auto;
+}
 .hero-offer {
   margin: 1.5em 0;
 }
@@ -184,7 +187,6 @@ section p {
   display: none;
 }
 #home {
-  xbackground: url(../img/_home.png) no-repeat center 277px;
   background-size: 900px ;
 }
 #home #page-header {

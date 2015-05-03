@@ -26,15 +26,9 @@
                                 {{ pose.name }}
                             </h2>
                             <div>
-                                <h4>Good for your body</h4>
+                                <h4>Benefits</h4>
                                 <ul class="list-unstyled">
                                     {% for b in pose.body_benefits %}
-                                        <li>{{ b }}</li>
-                                    {% endfor %}
-                                </ul>
-                                <h4>Good for your mind</h4>
-                                <ul class="list-unstyled">
-                                    {% for b in pose.mind_benefits %}
                                         <li>{{ b }}</li>
                                     {% endfor %}
                                 </ul>
