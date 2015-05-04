@@ -20,6 +20,12 @@ var params = {
 	"EndDateTime" : moment().add(1, 'days').format('YYYY-MM-DD')
 };
 
+
+// var params = {
+// 	"StartDateTime" : moment().startOf('month').format('YYYY-MM-DD'),
+// 	"EndDateTime" : moment().endOf('month').format('YYYY-MM-DD')
+// };
+
 var yogaClassProperties = [
 	"classId",
 	"name",
