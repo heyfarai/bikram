@@ -118,6 +118,11 @@ router.get('/info/rates', function(req, res) {
 	res.redirect(301, '/packages-and-prices');
 });
 
+// OLD GOOGLE REDIRECT
+router.get('/the-studio/teachers', function(req, res) {
+	res.redirect(301, '/');
+});
+
 
 
 
