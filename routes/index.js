@@ -88,4 +88,37 @@ router.get('/contact', function(req, res) {
 								});
 });
 
+// OLD SCHEDULE GOOGLE REDIRECT
+router.get('/class-schedule', function(req, res) {
+	res.redirect(301, '/classes');
+});
+
+// OLD GOOGLE REDIRECT
+router.get('/info/yoga-etiquette', function(req, res) {
+	res.redirect(301, '/has/26-poses');
+});
+
+// OLD GOOGLE REDIRECT
+router.get('/info/yoga-etiquette', function(req, res) {
+	res.redirect(301, '/has/26-poses');
+});
+
+// OLD GOOGLE REDIRECT
+router.get('/info/new-students', function(req, res) {
+	res.redirect(301, '/');
+});
+
+// OLD GOOGLE REDIRECT
+router.get('/the-studio/facilities', function(req, res) {
+	res.redirect(301, '/');
+});
+
+// OLD GOOGLE REDIRECT
+router.get('/info/rates', function(req, res) {
+	res.redirect(301, '/packages-and-prices');
+});
+
+
+
+
 module.exports = router;
