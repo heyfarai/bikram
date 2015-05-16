@@ -124,6 +124,4 @@ router.get('/the-studio/teachers', function(req, res) {
 });
 
 
-
-
 module.exports = router;
