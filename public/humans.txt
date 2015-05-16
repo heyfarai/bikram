@@ -1,0 +1,15 @@
+  ______                  _ 
+ |  ____|                (_)
+ | |__  __ _  _ __  __ _  _ 
+ |  __|/ _` || '__|/ _` || |
+ | |  | (_| || |  | (_| || |
+ |_|   \__,_||_|   \__,_||_|
+                            
+/* MAIN */
+  Develop & Main Design: Farai Madzima
+  Twitter: @farai_uxguy
+
+/* SITE */
+  Doctype: HTML5
+  IDE: Sublime Text
+
