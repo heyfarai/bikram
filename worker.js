@@ -12,7 +12,7 @@ var m = new Mandrill.Mandrill('KOI-UXu9dE9qgjSabCcf5w');
 
 // INTIALISE PARSE
 Parse.initialize(config.Parse.appId, config.Parse.jsKey)
-var YogaClass = Parse.Object.extend("ClassObject");
+var YogaClass = Parse.Object.extend("YogaClass");
 
 // SET QUERY PARAMETERS
 var params = {
@@ -21,17 +21,18 @@ var params = {
 };
 
 
-// var params = {
-// 	"StartDateTime" : moment().startOf('month').format('YYYY-MM-DD'),
-// 	"EndDateTime" : moment().endOf('month').format('YYYY-MM-DD')
-// };
+var params = {
+	"StartDateTime" : moment().startOf('month').format('YYYY-MM-DD'),
+	"EndDateTime" : moment().endOf('month').format('YYYY-MM-DD')
+};
 
 var yogaClassProperties = [
 	"classId",
 	"name",
 	"startTime",
 	"endTime",
-	"teacherName",
+	"teacherFirstName",
+	"teacherLastName",
 	"teacherID",
 	"isCancelled"
 	];
@@ -77,6 +78,7 @@ MB.getSoapClient()
 	MB.getClassesWithClient(client, params)
 	.then(function(classData){
 		retrievedClassData = MB.stripClasses(classData);
+		console.log("found classes", retrievedClassData)
 		return(retrievedClassData)
 	})
 	.then(function(newClassData){

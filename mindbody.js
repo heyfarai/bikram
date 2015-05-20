@@ -15,7 +15,8 @@ exports.stripClasses = function(data){
     		"name" : class_cache.ClassDescription.Name,
     		"startTime" : moment(class_cache.StartDateTime).format(),
     		"endTime" : moment(class_cache.EndDateTime).format(),
-    		"teacherName" : class_cache.Staff.Name,
+    		"teacherFirstName" : class_cache.Staff.FirstName,
+            "teacherLastName" : class_cache.Staff.LastName,
     		"teacherID" : toNumber(class_cache.Staff.ID),
     		"isCancelled" : toBoolean(class_cache.IsCanceled)
     	}
