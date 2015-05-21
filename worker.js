@@ -34,6 +34,7 @@ var yogaClassProperties = [
 	"teacherFirstName",
 	"teacherLastName",
 	"teacherID",
+	"classWeek",
 	"isCancelled"
 	];
 
