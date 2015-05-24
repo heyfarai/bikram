@@ -18,8 +18,7 @@ exports.stripClasses = function(data){
     		"teacherFirstName" : class_cache.Staff.FirstName,
             "teacherLastName" : class_cache.Staff.LastName,
     		"teacherID" : toNumber(class_cache.Staff.ID),
-    		"isCancelled" : toBoolean(class_cache.IsCanceled),
-            "classWeek" : moment(class_cache.StartDateTime).format("W")
+    		"isCancelled" : toBoolean(class_cache.IsCanceled)
     	}
     	output.push(C);
     })
