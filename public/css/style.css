@@ -423,8 +423,8 @@ hr.after-h2 {
 #position-browser li.active a {
   border-bottom: 4px solid #05b6e4;
 }
-.schedule-img-wrapper {
-  text-align: center;
+.schedule-img-wrapper img {
+  margin: 0 auto;
 }
 #contact-details p {
   text-align: left;
