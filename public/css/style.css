@@ -41,6 +41,27 @@ li {
 .section-wrapper.alt {
   background-color: #f0f9ff;
 }
+.class-list {
+  margin-bottom: 1.5em;
+}
+.class-list li {
+  border-bottom: 1px solid #e4e4e4;
+  padding: .2em 0 .6em;
+  font-size: 1.1em;
+}
+.class-list li.class-date h3 {
+  text-align: center;
+}
+.class-list li.class-date h3 span {
+  font-size: 0.8em;
+}
+.class-list li .class-time {
+  font-size: .8em;
+  color: #999999;
+}
+.class-list li .class-teacher {
+  color: #000;
+}
 .class-table.past .section-subtitle small {
   font-weight: normal;
   font-size: 1.4rem;
