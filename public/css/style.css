@@ -57,7 +57,12 @@ li {
 }
 .class-list li .class-time {
   font-size: .8em;
-  color: #999999;
+  color: #000;
+  font-weight: bold;
+}
+.class-list li .class-time span {
+  color: red !important;
+  font-weight: normal;
 }
 .class-list li .class-teacher {
   color: #000;
