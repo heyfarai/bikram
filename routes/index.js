@@ -3,14 +3,9 @@ var _ = require('underscore');
 var str = require('underscore.string');
 var config = require('../config');
 var db = require('./db');
-var Parse = require('parse').Parse;
 var _ = require('underscore');
 var router = express.Router();
 
-
-// INTIALISE PARSE
-// Parse.initialize(config.Parse.appId, config.Parse.jsKey)
-// var YogaClass = Parse.Object.extend("YogaClass");
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -74,24 +69,6 @@ router.get('/has/26-poses/:pose_id/:name', function(req, res) {
 });
 
 router.get('/classes', function(req, res) {
-	// var query = new Parse.Query(YogaClass);
-	// query.notEqualTo("teacherID", -1, "teacherID", 1);
-	// query.greaterThan("startTime", "2015-11-09");
-	// query.limit(1000);
-	// query.find({
- //        success: function(objs) {
- //            // objects have been saved...
- //            var success_msg = "\nFound" + objs.length + " Yoga Classes to Parse."
-	// 		console.log(objs);
-	// 		return 
- //        },
- //        error: function(error) { 
- //            // an error occurred...
- //            var error_msg = "\nError saving " + error.message
-	// 		console.log(error_msg);
-	// 		return 
- //        }
- //    });
 	res.render('classes.html', { 
 									title: 'Class Schedule - Bikram Yoga Fourways',
 									current_page : 'classes'
