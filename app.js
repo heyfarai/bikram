@@ -55,7 +55,6 @@ app.use(function(err, req, res, next) {
     });
 });
 
-app.listen(app.get('port'), function() {
-  console.log("Bikram Yoga Fourways is running at localhost:" + app.get('port'))
+app.listen(5007, function() {
+  console.log("Bikram Yoga Fourways is running at localhost:" + 5007)
 })
-
