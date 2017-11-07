@@ -27,6 +27,6 @@
   "repository": "",
   "license": "ISC",
   "engines": {
-    "node": "*"
+    "node": "6.0.0"
   }
 }
